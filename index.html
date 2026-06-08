@@ -218,6 +218,74 @@
                 <button class="btn" style="width:100%; background:red; color:black; border:none; font-weight:bold; margin-top:10px;" onclick="location.reload()">ABORT</button>
             </div>
         </aside>
+ <!-- TOPBAR -->
+        <header class="topbar panel">
+            <div>STATUS: <span class="blink text-red" id="sys-status">BREACH DETECTED</span></div>
+            <div>CPU: <span id="cpu-val">89%</span> | RAM: <span id="ram-val">4.2GB</span> | UPTIME: <span id="uptime">00:00:00</span></div>
+        </header>
+
+        <!-- CENTER AREA (Swappable Views) -->
+        <main class="area-main" id="content-area">
+            <!-- Default: Dashboard View -->
+            <div class="panel" style="grid-column: 1/-1; display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;">
+                <div class="panel">
+                    <div class="panel-header">TRAFFIC_INJECTION</div>
+                    <div class="panel-content">
+                        <canvas id="mainChart"></canvas>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-header">THREAT_VECTOR_ANALYSIS</div>
+                    <div class="panel-content" id="threat-list">
+                        <!-- Filled via JS -->
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-header">TARGET_TOPOLOGY</div>
+                    <div class="panel-content">
+                        <canvas id="mapCanvas"></canvas>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-header">SYSTEM_LOGS (REALTIME)</div>
+                    <div class="panel-content" id="log-feed"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- BOTTOM AREA: TERMINAL -->
+        <section class="area-bottom panel">
+            <div class="panel-header">TERMINAL_OUTPUT (BASH)</div>
+            <div class="panel-content" id="terminal-output">
+                Welcome to Ghost Protocol v4.0.2<br>
+                Type 'help' for command list.<br>
+            </div>
+            <div style="padding: 10px; background: rgba(0,0,0,0.5); display:flex;">
+                <span class="prompt">root@ghost:~#</span>
+                <input type="text" id="cmd-input" autocomplete="off" autofocus>
+            </div>
+        </section>
+
+        <!-- RIGHT AREA: SNIFFER & PROCESSES -->
+        <aside class="area-right">
+            <div class="panel" style="height: 50%; margin-bottom: 10px;">
+                <div class="panel-header">PACKET_SNIFFER (ETH0)</div>
+                <div class="panel-content" id="hex-dump">
+                    <!-- Hex Rows Generated Here -->
+                </div>
+            </div>
+            <div class="panel" style="height: 50%;">
+                <div class="panel-header">RUNNING_PROCESSES</div>
+                <div class="panel-content">
+                    <table class="proc-table">
+                        <thead><tr><th>PID</th><th>NAME</th><th>CPU</th><th>MEM</th></tr></thead>
+                        <tbody id="proc-list">
+                            <!-- Filled via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </aside>
 
 
 
