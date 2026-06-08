@@ -461,6 +461,48 @@ function initApp() {
                 requestAnimationFrame(draw);
             }
             draw();
+                     }
+
+        // --- MAP/NET VISUALIZER ---
+        function initMap() {
+            const cvs = document.getElementById('mapCanvas');
+            const ctx = cvs.getContext('2d');
+            let nodes = Array(10).fill().map(() => ({
+                x: Math.random() * 300, y: Math.random() * 200,
+                vx: (Math.random()-0.5), vy: (Math.random()-0.5)
+            }));
+
+            function draw() {
+                cvs.width = cvs.parentElement.offsetWidth;
+                cvs.height = cvs.parentElement.offsetHeight;
+                ctx.clearRect(0,0,cvs.width, cvs.height);
+
+                nodes.forEach((n, i) => {
+                    n.x += n.vx; n.y += n.vy;
+                    if(n.x<0||n.x>cvs.width) n.vx*=-1;
+                    if(n.y<0||n.y>cvs.height) n.vy*=-1;
+
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, 4, 0, Math.PI*2);
+                    ctx.fillStyle = 'red';
+                    ctx.fill();
+
+                    // Connections
+                    nodes.forEach((m, j) => {
+                        if(i!==j) {
+                            ctx.beginPath();
+                            ctx.moveTo(n.x, n.y);
+                            ctx.lineTo(m.x, m.y);
+                            ctx.strokeStyle = 'rgba(0, 255, 65, 0.2)';
+                            ctx.stroke();
+                        }
+                    });
+                });
+                requestAnimationFrame(draw);
+            }
+            draw();
+        }
+
 
 
 
