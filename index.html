@@ -502,6 +502,21 @@ function initApp() {
             }
             draw();
         }
+                        // --- LOGS & UTILS ---
+        function startLogFeed() {
+            const feed = document.getElementById('log-feed');
+            const msgs = ["SQL INJECTION BLOCKED", "AUTH FAILURE: USER 'admin'", "PORT SCAN DETECTED", "PAYLOAD DECRYPTED", "PACKET LOSS"];
+            
+            setInterval(() => {
+                const div = document.createElement('div');
+                div.innerText = `[${new Date().toLocaleTimeString()}] ${msgs[Math.floor(Math.random()*msgs.length)]}`;
+                div.style.borderBottom = '1px solid #003300';
+                div.style.padding = '2px 0';
+                feed.prepend(div);
+                if(feed.children.length > 10) feed.lastChild.remove();
+            }, 800);
+        }
+
 
 
 
