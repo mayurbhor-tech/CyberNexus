@@ -357,6 +357,72 @@ function initApp() {
                     this.value = '';
                     output.scrollTop = output.scrollHeight;
                 }
+ });
+        }
+
+        function printToTerminal(text) {
+            const div = document.createElement('div');
+            div.innerText = text;
+            div.style.color = text.includes('OPEN') ? 'red' : (text.includes('GRANTED') ? '#0f0' : '#ccc');
+            document.getElementById('terminal-output').appendChild(div);
+        }
+
+        // --- PACKET SNIFFER (HEX DUMP) ---
+        function startSniffer() {
+            const container = document.getElementById('hex-dump');
+            const hexChars = "0123456789ABCDEF";
+            
+            setInterval(() => {
+                if(container.children.length > 15) container.firstChild.remove();
+                
+                const offset = Math.floor(Math.random() * 10000).toString(16).toUpperCase().padStart(4, '0');
+                let hex = "";
+                let ascii = "";
+                
+                for(let i=0; i<8; i++) {
+                    const b1 = hexChars[Math.floor(Math.random()*16)];
+                    const b2 = hexChars[Math.floor(Math.random()*16)];
+                    hex += `${b1}${b2} `;
+                    ascii += (Math.random() > 0.8) ? String.fromCharCode(33+Math.random()*90) : '.';
+                }
+
+                const row = document.createElement('div');
+                row.className = 'hex-row';
+                row.innerHTML = `<span class="hex-offset">0x${offset}</span><span class="hex-code">${hex}</span><span class="hex-ascii">|${ascii}|</span>`;
+                container.appendChild(row);
+            }, 200);
+        }
+
+        // --- PROCESS HACKER ---
+        const fakeProcesses = [
+            {name: 'kworker/u2:0', base: 0.5},
+            {name: 'systemd-journal', base: 1.2},
+            {name: 'sql_inject.exe', base: 45.0}, // Suspicious
+            {name: 'crypt_miner', base: 88.0}, // Suspicious
+            {name: 'apache2', base: 5.0},
+            {name: 'python_exploit', base: 12.0} // Suspicious
+        ];
+
+        function startProcessMonitor() {
+            const tbody = document.getElementById('proc-list');
+            
+            setInterval(() => {
+                tbody.innerHTML = '';
+                fakeProcesses.forEach(p => {
+                    const cpu = (p.base + Math.random() * 5).toFixed(1);
+                    const mem = (Math.random() * 500).toFixed(0);
+                    const pid = Math.floor(Math.random() * 9000) + 1000;
+                    const row = `
+                        <tr>
+                            <td>${pid}</td>
+                            <td class="${cpu > 40 ? 'proc-high' : ''}">${p.name}</td>
+                            <td class="${cpu > 40 ? 'proc-high' : ''}">${cpu}%</td>
+                            <td>${mem}MB</td>
+                        </tr>
+                    `;
+                    tbody.innerHTML += row;
+                });
+            }, 1000);
 
 
 
