@@ -143,6 +143,45 @@ GHOST_PROTOCOL/
 └── Assets
     └── (Optional)
 ```
+Then visit:
+
+```text
+http://localhost:8080
+```
+
+---
+
+## Terminal Commands
+
+### Help
+
+```bash
+help
+```
+
+Displays available commands.
+
+### Status
+
+```bash
+status
+```
+
+Shows current system information.
+
+### Scan
+
+```bash
+scan 192.168.1.1
+```
+
+Performs a simulated port scan.
+
+### Decrypt
+
+```bash
+decrypt
+```
 
 
 
