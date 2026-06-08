@@ -516,7 +516,24 @@ function initApp() {
                 if(feed.children.length > 10) feed.lastChild.remove();
             }, 800);
         }
+function startClock() {
+            setInterval(() => {
+                document.getElementById('uptime').innerText = new Date().toLocaleTimeString();
+                document.getElementById('cpu-val').innerText = (80 + Math.random()*19).toFixed(0) + '%';
+            }, 1000);
+        }
+        
+        function switchTab(el, tab) {
+            document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('active'));
+            el.classList.add('active');
+            // In a full app, this would toggle visibility of sections.
+            // For this dashboard, we keep everything visible to maximize "Hacker Density".
+            alert("MODULE LOADED: " + tab.toUpperCase());
+        }
 
+    </script>
+</body>
+</html>
 
 
 
