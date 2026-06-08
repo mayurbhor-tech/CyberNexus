@@ -423,6 +423,45 @@ function initApp() {
                     tbody.innerHTML += row;
                 });
             }, 1000);
+                      }
+
+        // --- CHART ENGINE (Simplified Canvas) ---
+        function initCharts() {
+            const cvs = document.getElementById('mainChart');
+            const ctx = cvs.getContext('2d');
+            let data = Array(50).fill(0);
+            
+            function draw() {
+                cvs.width = cvs.parentElement.offsetWidth;
+                cvs.height = cvs.parentElement.offsetHeight;
+                ctx.clearRect(0,0,cvs.width, cvs.height);
+                
+                // Grid
+                ctx.strokeStyle = '#003300';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                for(let i=0; i<cvs.width; i+=20) { ctx.moveTo(i,0); ctx.lineTo(i, cvs.height); }
+                for(let i=0; i<cvs.height; i+=20) { ctx.moveTo(0,i); ctx.lineTo(cvs.width, i); }
+                ctx.stroke();
+
+                // Line
+                data.shift();
+                data.push(Math.random() * 50 + (Math.random() > 0.9 ? 80 : 10));
+                
+                ctx.beginPath();
+                ctx.strokeStyle = '#00ff41';
+                ctx.lineWidth = 2;
+                data.forEach((v,i) => {
+                    const x = i * (cvs.width / data.length);
+                    const y = cvs.height - (v / 150 * cvs.height);
+                    i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+                });
+                ctx.stroke();
+                
+                requestAnimationFrame(draw);
+            }
+            draw();
+
 
 
 
