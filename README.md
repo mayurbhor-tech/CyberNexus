@@ -31,4 +31,27 @@ The application is entirely front-end based and requires no backend services.
 * Screen flicker animation
 * Retro terminal aesthetic
 
+* * Scanline overlay
+* Screen flicker animation
+* Retro terminal aesthetic
+
+### Interactive Sidebar
+
+* Dashboard navigation
+* Module switching
+* Active selection highlighting
+
+### Real-Time Terminal Emulator
+
+* Built-in command parser
+* Simulated system responses
+* Available commands:
+
+  * `help`
+  * `status`
+  * `scan [IP]`
+  * `decrypt`
+  * `clear`
+
+
 
