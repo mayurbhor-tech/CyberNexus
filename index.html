@@ -604,6 +604,17 @@ function startClock() {
             startClock();
             initTerminal();
         }
+             // --- TERMINAL LOGIC ---
+        function initTerminal() {
+            const input = document.getElementById('cmd-input');
+            const output = document.getElementById('terminal-output');
+
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const cmd = this.value.trim().toLowerCase();
+                    printToTerminal(`root@ghost:~# ${this.value}`);
+                    
+
 
 
 
