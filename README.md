@@ -227,6 +227,21 @@ The project was created to emulate:
 * Minimal resource consumption
 
 ---
+## Future Enhancements
+
+* WebSocket live feeds
+* Interactive node attacks
+* User authentication system
+* Dark/green/red theme switching
+* Multi-window terminal support
+* Sound effects
+* Matrix rain background
+* Real packet capture integration
+* AI threat detection simulator
+
+---
+
+## Screenshots
 
 
 
