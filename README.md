@@ -70,6 +70,28 @@ The application is entirely front-end based and requires no backend services.
 * Traffic injection visualization
 * Threat vector display
 * System log stream
+* ### Threat Dashboard
+
+* Real-time activity monitoring
+* Traffic injection visualization
+* Threat vector display
+* System log stream
+
+### Network Topology Visualization
+
+* Animated node connections
+* Dynamic movement system
+* Simulated target mapping
+
+### System Metrics
+
+* CPU usage monitor
+* RAM statistics
+* Uptime display
+* Breach status indicators
+
+---
+
 
 
 
