@@ -182,6 +182,27 @@ Performs a simulated port scan.
 ```bash
 decrypt
 ```
+Runs a fake brute-force sequence.
+
+### Clear
+
+```bash
+clear
+```
+
+Clears terminal output.
+
+---
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* Vanilla JavaScript
+* Canvas API
+* CSS Animations
+* Flexbox
+* CSS Grid
 
 
 
