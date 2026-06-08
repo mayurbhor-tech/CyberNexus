@@ -308,6 +308,57 @@ let bootIndex = 0;
         }
         runBoot();
 
+function initApp() {
+            initCharts();
+            initMap();
+            startSniffer();
+            startProcessMonitor();
+            startLogFeed();
+            startClock();
+            initTerminal();
+        }
+
+        // --- TERMINAL LOGIC ---
+        function initTerminal() {
+            const input = document.getElementById('cmd-input');
+            const output = document.getElementById('terminal-output');
+
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const cmd = this.value.trim().toLowerCase();
+                    printToTerminal(`root@ghost:~# ${this.value}`);
+                    
+                    // Command Processing
+                    if (cmd === 'help') {
+                        printToTerminal("AVAILABLE COMMANDS:");
+                        printToTerminal("  scan [IP]   - Port scan target");
+                        printToTerminal("  kill [PID]  - Terminate process");
+                        printToTerminal("  clear       - Clear terminal");
+                        printToTerminal("  decrypt     - Attempt to decrypt hashes");
+                        printToTerminal("  status      - Show system status");
+                    } else if (cmd === 'clear') {
+                        output.innerHTML = '';
+                    } else if (cmd === 'status') {
+                        printToTerminal("SYSTEM: COMPROMISED");
+                        printToTerminal("UPLINK: SECURE");
+                        printToTerminal("TARGETS: 4 ACTIVE");
+                    } else if (cmd.startsWith('scan')) {
+                        printToTerminal(`INITIATING SYN SCAN ON ${cmd.split(' ')[1] || '127.0.0.1'}...`);
+                        printToTerminal("PORT 22: OPEN");
+                        printToTerminal("PORT 80: OPEN");
+                        printToTerminal("PORT 443: FILTERED");
+                    } else if (cmd === 'decrypt') {
+                        printToTerminal("BRUTE FORCE INITIATED... [##########] 100%");
+                        printToTerminal("KEY FOUND: 0x4F9A2B... ACCESS GRANTED.");
+                    } else if (cmd !== '') {
+                        printToTerminal(`COMMAND NOT FOUND: ${cmd}`);
+                    }
+                    
+                    this.value = '';
+                    output.scrollTop = output.scrollHeight;
+                }
+
+
 
 
 
