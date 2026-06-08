@@ -203,6 +203,31 @@ Clears terminal output.
 * CSS Animations
 * Flexbox
 * CSS Grid
+* ---
+
+## Design Goals
+
+The project was created to emulate:
+
+* Hollywood hacking interfaces
+* Cyberpunk aesthetics
+* Retro CRT terminals
+* Security Operations Centers (SOC)
+* Penetration testing dashboards
+* Science-fiction command centers
+
+---
+
+## Performance
+
+* No external libraries
+* No frameworks
+* Lightweight architecture
+* Runs entirely in-browser
+* Minimal resource consumption
+
+---
+
 
 
 
