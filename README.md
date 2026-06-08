@@ -18,3 +18,17 @@ The application is entirely front-end based and requires no backend services.
 ---
 
 ## Features
+
+### Boot Sequence Simulation
+
+* BIOS-style startup messages
+* System initialization animation
+* Smooth transition into dashboard mode
+
+### CRT Monitor Effects
+
+* Scanline overlay
+* Screen flicker animation
+* Retro terminal aesthetic
+
+
