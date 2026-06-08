@@ -591,6 +591,20 @@ function startClock() {
                     initApp();
                 }, 1000);
             }
+             }
+        runBoot();
+
+        // --- APP INITIALIZATION ---
+        function initApp() {
+            initCharts();
+            initMap();
+            startSniffer();
+            startProcessMonitor();
+            startLogFeed();
+            startClock();
+            initTerminal();
+        }
+
 
 
 
