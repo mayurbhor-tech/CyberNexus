@@ -286,6 +286,28 @@
                 </div>
             </div>
         </aside>
+let bootIndex = 0;
+        const bootScreen = document.getElementById('boot-screen');
+        const mainInterface = document.getElementById('main-interface');
+
+        function runBoot() {
+            if (bootIndex < bootText.length) {
+                const line = document.createElement('div');
+                line.innerText = bootText[bootIndex];
+                bootScreen.appendChild(line);
+                bootIndex++;
+                setTimeout(runBoot, Math.random() * 300 + 100);
+            } else {
+                setTimeout(() => {
+                    bootScreen.style.display = 'none';
+                    mainInterface.style.display = 'grid';
+                    setTimeout(() => mainInterface.style.opacity = '1', 100);
+                    initApp();
+                }, 1000);
+            }
+        }
+        runBoot();
+
 
 
 
