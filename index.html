@@ -77,5 +77,27 @@
             border-right: 2px solid var(--neon-green);
             width: 10px; height: 10px;
         }
+.panel-content {
+            flex: 1;
+            overflow: auto;
+            padding: 10px;
+        }
+
+        /* --- SIDEBAR --- */
+        .sidebar {
+            grid-row: 1 / -1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand {
+            font-size: 20px;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px dashed var(--neon-green);
+            margin-bottom: 10px;
+            animation: glitch 1s infinite alternate-reverse;
+        }
+
 
         
