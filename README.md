@@ -1,4 +1,4 @@
-# CyberNexus
++# CyberNexus
 A cyberpunk-inspired hacker dashboard featuring a terminal emulator, packet sniffer, process monitor, and real-time threat visualization built with HTML, CSS, and JavaScript.
 # GHOST_PROTOCOL // ROOT ACCESS
 
@@ -284,6 +284,10 @@ This project is intended solely for educational, entertainment, and UI/UX demons
 All hacking-related functionality is simulated. No actual network attacks, exploitation tools, or penetration-testing features are included.
 
 ---
+
+**GHOST_PROTOCOL** is an immersive hacker-themed web interface designed to simulate a high-tech cybersecurity operations center. Inspired by movie-style hacking terminals, penetration testing dashboards, and retro CRT displays, the project combines animated visualizations, fake network monitoring, terminal interactions, and real-time system effects into a single interactive experience.
+
+The application is entirely front-end based and requires no backend services.
 
 
 
