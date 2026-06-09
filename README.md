@@ -60,7 +60,7 @@ The application is entirely front-end based and requires no backend services.
 
 ### Process Monitor
 
-* Dynamic process table
+* Dynamic  process table
 * CPU and memory usage updates
 * High-resource process highlighting
 
