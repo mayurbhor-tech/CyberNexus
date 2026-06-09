@@ -662,7 +662,24 @@ function startClock() {
     </script>
 </body>
 </html>
-                    
+    @keyframes flicker {
+            0% { opacity: 0.95; }
+            100% { opacity: 1; }
+        }
+
+        /* --- BOOT SEQUENCE --- */
+        #boot-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #000;
+            z-index: 10000;
+            padding: 40px;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+                 
 
 
 
