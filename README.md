@@ -325,6 +325,21 @@ The application is entirely front-end based and requires no backend services.
 * Threat vector display
 * System log stream
 
+### Network Topology Visualization
+
+* Animated node connections
+* Dynamic movement system
+* Simulated target mapping
+
+### System Metrics
+
+* CPU usage monitor
+* RAM statistics
+* Uptime display
+* Breach status indicators
+
+---
+
 
 
 
