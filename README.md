@@ -37,7 +37,7 @@ The application is entirely front-end based and requires no backend services.
 
 ### Interactive Sidebar
 
-* Dashboard navigation
+* Dashboard  navigation
 * Module switching
 * Active selection highlighting
 
