@@ -693,6 +693,33 @@ function startClock() {
             transition: opacity 2s;
         }
 
+ /* --- PANELS (Tech Borders) --- */
+        .panel {
+            background: var(--bg-panel);
+            border: 1px solid var(--neon-blue);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Corner Brackets */
+        .panel::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            border-top: 2px solid var(--neon-green);
+            border-left: 2px solid var(--neon-green);
+            width: 10px; height: 10px;
+        }
+        .panel::after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            border-bottom: 2px solid var(--neon-green);
+            border-right: 2px solid var(--neon-green);
+            width: 10px; height: 10px;
+        }
 
 
 
