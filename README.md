@@ -43,7 +43,7 @@ The application is entirely front-end based and requires no backend services.
 
 ### Real-Time Terminal Emulator
 
-* Built-in command parser
+* Built-in  command parser
 * Simulated system responses
 * Available commands:
 
