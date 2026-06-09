@@ -289,6 +289,25 @@ All hacking-related functionality is simulated. No actual network attacks, explo
 
 The application is entirely front-end based and requires no backend services.
 
+### Interactive Sidebar
+
+* Dashboard navigation
+* Module switching
+* Active selection highlighting
+
+### Real-Time Terminal Emulator
+
+* Built-in command parser
+* Simulated system responses
+* Available commands:
+
+  * `help`
+  * `status`
+  * `scan [IP]`
+  * `decrypt`
+  * `clear`
+
+
 
 
 
