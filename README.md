@@ -306,6 +306,24 @@ The application is entirely front-end based and requires no backend services.
   * `scan [IP]`
   * `decrypt`
   * `clear`
+### Packet Sniffer
+
+* Live hexadecimal packet stream
+* Randomized network traffic simulation
+* Continuous scrolling updates
+
+### Process Monitor
+
+* Dynamic process table
+* CPU and memory usage updates
+* High-resource process highlighting
+
+### Threat Dashboard
+
+* Real-time activity monitoring
+* Traffic injection visualization
+* Threat vector display
+* System log stream
 
 
 
