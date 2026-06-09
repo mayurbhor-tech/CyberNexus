@@ -339,6 +339,35 @@ The application is entirely front-end based and requires no backend services.
 * Breach status indicators
 
 ---
+## Project Structure
+
+```text
+GHOST_PROTOCOL/
+│
+├── index.html
+├── README.md
+│
+├── CSS
+│   ├── CRT effects
+│   ├── Cyberpunk UI
+│   ├── Animations
+│   └── Layout System
+│
+├── JavaScript
+│   ├── Boot Loader
+│   ├── Terminal Engine
+│   ├── Packet Sniffer
+│   ├── Process Monitor
+│   ├── Chart Renderer
+│   ├── Network Visualizer
+│   └── Log Generator
+│
+└── Assets
+    └── (Optional)
+```
+
+---
+
 
 
 
