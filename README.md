@@ -277,6 +277,14 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 > CONNECTION: ENCRYPTED
 > STATUS: ONLINE
 ```
+## Disclaimer
+
+This project is intended solely for educational, entertainment, and UI/UX demonstration purposes.
+
+All hacking-related functionality is simulated. No actual network attacks, exploitation tools, or penetration-testing features are included.
+
+---
+
 
 
 
