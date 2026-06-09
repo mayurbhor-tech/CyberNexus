@@ -399,6 +399,38 @@ Then visit:
 http://localhost:8080
 ```
 
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/ghost_protocol.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd ghost_protocol
+```
+
+Open the project:
+
+```bash
+index.html
+```
+
+or run using a local server:
+
+```bash
+python -m http.server 8080
+```
+
+Then visit:
+
+```text
+http://localhost:8080
+```
+
 
 
 
