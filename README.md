@@ -11,7 +11,7 @@ A cyberpunk-inspired hacker dashboard featuring a terminal emulator, packet snif
 ---
 ## Overview
 
-**GHOST_PROTOCOL** is an immersive hacker-themed web interface designed to simulate a high-tech cybersecurity operations center. Inspired by movie-style hacking terminals, penetration testing dashboards, and retro CRT displays, the project combines animated visualizations, fake network monitoring, terminal interactions, and real-time system effects into a single interactive experience.
+**GHOST_PROTOCOL** is an  immersive hacker-themed web interface designed to simulate a high-tech cybersecurity operations center. Inspired by movie-style hacking terminals, penetration testing dashboards, and retro CRT displays, the project combines animated visualizations, fake network monitoring, terminal interactions, and real-time system effects into a single interactive experience.
 
 The application is entirely front-end based and requires no backend services.
 
